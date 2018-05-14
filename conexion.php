@@ -1,7 +1,7 @@
 <?php
 function conectar(){
        $user="root";
-       $pass="";
+       $pass="Atleti123@";
        $server="localhost";
        $db="pineapple";
        $con=mysqli_connect($server,$user,$pass) or die ("error al conectar a la base de datos".mysqli_error());

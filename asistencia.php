@@ -33,7 +33,7 @@
                      $curp = $row['CURP'];
                      $nombre = $row['nombre'];
                      $apellidoP = $row['apellidoP'];
-                     $puesto = $row['puesto'];
+                     $puesto = $row['cargo'];
 ?>
        <tbody>
               <tr>
@@ -50,7 +50,7 @@
                      <?php echo $puesto;?>
                      </th>
                      <th>
-                     <input type="text" name="horas" placeholder="horas extra">
+                     <input class="form-control" type="text" name="horas" id="<?php echo $curp;?>" placeholder="horas extra">
                      </th>
                      <th>
                      <button class="btn" onClick="mandarAsistencia('<?php echo $curp;?>')">Asistio</button>

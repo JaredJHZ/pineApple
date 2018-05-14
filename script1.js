@@ -1,4 +1,7 @@
-mandarAsistencia = (curp,horas)=>{
+mandarAsistencia = (curp)=>{
+        alert("xd");
+        let horas = document.getElementById(curp).value;
+        alert(horas);
        if(curp.length ==0){
               return console.error("invalid curp");
        }
@@ -8,7 +11,8 @@ mandarAsistencia = (curp,horas)=>{
                      alert(this.responseText);
               }      
        };
-       xmlhttp.open("POST","verificar.php?curp="+curp,true);
+    
+       xmlhttp.open("POST","verificar.php?curp="+curp+"&horas="+horas,true);
        xmlhttp.send();
 
 }
