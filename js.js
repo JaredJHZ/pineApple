@@ -1,5 +1,0 @@
-(function(){
-       sendDate = ()=>{
-              alert("Hola");
-       }
-})();
