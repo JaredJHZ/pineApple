@@ -9,8 +9,11 @@
        <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <?php
+        include("header.php");
+    ?>
        <div class="row justify-content-md-center">
-       <h3 id="titulo">Asistencia</h3> 
+       <h3 id="titulo">Asistencia del día <?php $day = new Datetime(); echo date_format($day,"d-m-y");  ?></h3> 
        </div>
        <div class="row">
        </div>
@@ -20,6 +23,7 @@
               <th>Nombre</th>
               <th>Apellido Paterno</th>
               <th>Puesto </th>
+              <th>Actividad</th>
               <th>Horas</th>
               <th>Asistencias</th>
        </thead>
@@ -34,6 +38,7 @@
                      $nombre = $row['nombre'];
                      $apellidoP = $row['apellidoP'];
                      $puesto = $row['cargo'];
+                     $actividad = $row['actividad'];
 ?>
        <tbody>
               <tr>
@@ -50,20 +55,23 @@
                      <?php echo $puesto;?>
                      </th>
                      <th>
+                     <?php echo $actividad;?> 
+                     </th>
+                     <th>
                      <input class="form-control" type="text" name="horas" id="<?php echo $curp;?>" placeholder="horas extra">
                      </th>
                      <th>
                      <button class="btn" onClick="mandarAsistencia('<?php echo $curp;?>')">Asistio</button>
                      </th>
-                    
-              </tr>
-       </tbody>
-</table>
-<?php
+                     <?php
        }
        mysqli_close($con);
 }
 ?>
+              </tr>
+       </tbody>
+</table>
+
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

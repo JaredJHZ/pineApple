@@ -6,7 +6,7 @@
        $date = new DateTime();
        $accion = "INSERT INTO asistencia VALUES(now(), '$horas', '$curp');";
        if($con->query($accion)===TRUE){
-              echo "ok";
+              echo "Asistencia añadida";
        }else{
               echo mysqli_error($con);
        }

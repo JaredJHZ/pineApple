@@ -1,7 +1,5 @@
 mandarAsistencia = (curp)=>{
-        alert("xd");
         let horas = document.getElementById(curp).value;
-        alert(horas);
        if(curp.length ==0){
               return console.error("invalid curp");
        }
